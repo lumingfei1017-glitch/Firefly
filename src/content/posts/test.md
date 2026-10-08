@@ -5,7 +5,6 @@ pinned: true
 description: 天气怎么样呢。
 tags: [Markdown, Firefly, 博客, 主题, 模板]
 category: 文章示例
-draft: true
 ---
 
 ### 这是一个测试

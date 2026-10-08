@@ -5,7 +5,6 @@ pinned: true
 description: 仅仅是个测试。
 tags: [Markdown, 博客, 测试, Agent]
 category: 文章示例
-draft: true
 ---
 
 # Pi Agent Harness 学习计划
