@@ -7,6 +7,7 @@ category: 文章示例
 slug: video
 series: "Firefly 功能示例"
 seriesOrder: 5
+draft: true
 ---
 
 只需从 YouTube 或其他平台复制嵌入代码，然后将其粘贴到 markdown 文件中。
@@ -20,6 +21,7 @@ published: 2023-10-19
 
 <iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
 ```
+
 ## YouTube
 
 <iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

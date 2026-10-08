@@ -11,33 +11,36 @@ sourceLink: "https://github.com/emn178/markdown"
 slug: markdown-tutorial
 series: "Firefly 功能示例2"
 seriesOrder: 1
+draft: true
 ---
 
 这是一个展示如何编写 Markdown 文件的示例。本文档汇总了核心语法与常见扩展（GFM）。
 
 - [块级元素](#block-elements)
-    - [段落与换行](#paragraphs-and-line-breaks)
-    - [标题](#headers)
-    - [引用](#blockquotes)
-    - [列表](#lists)
-    - [代码块](#code-blocks)
-    - [分割线](#horizontal-rules)
-    - [表格](#table)
+  - [段落与换行](#paragraphs-and-line-breaks)
+  - [标题](#headers)
+  - [引用](#blockquotes)
+  - [列表](#lists)
+  - [代码块](#code-blocks)
+  - [分割线](#horizontal-rules)
+  - [表格](#table)
 - [内联元素](#span-elements)
-    - [链接](#links)
-    - [强调](#emphasis)
-    - [行内代码](#code)
-    - [图片](#images)
-    - [删除线](#strikethrough)
+  - [链接](#links)
+  - [强调](#emphasis)
+  - [行内代码](#code)
+  - [图片](#images)
+  - [删除线](#strikethrough)
 - [杂项](#miscellaneous)
-    - [自动链接](#automatic-links)
-    - [反斜杠转义](#backslash-escapes)
+  - [自动链接](#automatic-links)
+  - [反斜杠转义](#backslash-escapes)
 - [内联 HTML](#inline-html)
 
 <a id="block-elements"></a>
+
 ## 块级元素
 
 <a id="paragraphs-and-line-breaks"></a>
+
 ### 段落与换行
 
 #### 段落
@@ -85,6 +88,7 @@ inline.
 ---
 
 <a id="headers"></a>
+
 ### 标题
 
 Markdown 支持两种标题样式：Setext 与 atx。
@@ -157,6 +161,7 @@ HTML 标签：`<h1>`，`<h2>`，`<h3>`，`<h4>`，`<h5>`，`<h6>`
 ---
 
 <a id="blockquotes"></a>
+
 ### 引用
 
 HTML 标签：`<blockquote>`
@@ -260,6 +265,7 @@ Markdown 允许“偷懒”：在一个硬换行段落中，只在第一行前�
 ---
 
 <a id="lists"></a>
+
 ### 列表
 
 Markdown 支持有序（数字）与无序（圆点）列表。
@@ -419,6 +425,7 @@ HTML 标签：`<ol>`
 ---
 
 <a id="code-blocks"></a>
+
 ### 代码块
 
 HTML 标签：`<pre>`
@@ -516,6 +523,7 @@ puts markdown.to_html
 ---
 
 <a id="horizontal-rules"></a>
+
 ### 分割线（水平线）
 
 HTML 标签：`<hr />`
@@ -549,6 +557,7 @@ HTML 标签：`<hr />`
 ---
 
 <a id="table"></a>
+
 ### 表格
 
 HTML 标签：`<table>`
@@ -597,9 +606,11 @@ A |B
 ---
 
 <a id="span-elements"></a>
+
 ## 内联元素
 
 <a id="links"></a>
+
 ### 链接
 
 HTML 标签：`<a>`
@@ -699,6 +710,7 @@ This is [an example][id] reference-style link.
 ---
 
 <a id="emphasis"></a>
+
 ### 强调
 
 HTML 标签：`<em>`，`<strong>`
@@ -746,6 +758,7 @@ _single underscores_
 ---
 
 <a id="code"></a>
+
 ### 行内代码
 
 HTML 标签：`<code>`
@@ -797,6 +810,7 @@ A backtick-delimited string in a code span: `` `foo` ``
 ---
 
 <a id="images"></a>
+
 ### 图片
 
 HTML 标签：`<img />`
@@ -851,6 +865,7 @@ Markdown 的图片语法与链接类似，支持行内与引用两种方式。
 ---
 
 <a id="strikethrough"></a>
+
 ### 删除线
 
 HTML 标签：`<del>`
@@ -874,9 +889,11 @@ GFM 增加了删除线语法。
 ---
 
 <a id="miscellaneous"></a>
+
 ## 杂项
 
 <a id="automatic-links"></a>
+
 ### 自动链接
 
 Markdown 支持一种便捷写法来创建“自动链接”（URL 与邮箱地址）：只需用尖括号将其包住即可。
@@ -914,6 +931,7 @@ https://github.com/emn178/markdown
 ---
 
 <a id="backslash-escapes"></a>
+
 ### 反斜杠转义
 
 Markdown 允许使用反斜杠来转义那些本用于 Markdown 语法的特殊字符，使其按字面显示。
@@ -948,6 +966,7 @@ Code:
     !   exclamation mark
 
 <a id="inline-html"></a>
+
 ## 内联 HTML
 
 对于 Markdown 语法未覆盖的标记，直接使用原生 HTML 即可。无需特别声明从 Markdown 切换到 HTML，直接写标签就行。

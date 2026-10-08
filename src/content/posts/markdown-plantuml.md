@@ -7,6 +7,7 @@ category: 文章示例
 slug: markdown-plantuml
 series: "Firefly 功能示例2"
 seriesOrder: 4
+draft: true
 ---
 
 ## Markdown 中 PlantUML 图表指南
@@ -249,4 +250,3 @@ Rel(web, plantuml, "请求图表 SVG")
 LAYOUT_LEFT_RIGHT()
 @enduml
 ```
-

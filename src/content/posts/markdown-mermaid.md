@@ -8,7 +8,9 @@ category: 文章示例
 slug: markdown-mermaid
 series: "Firefly 功能示例2"
 seriesOrder: 3
+draft: true
 ---
+
 ## Markdown 中 Mermaid 图表完整指南
 
 本文演示如何在 Markdown 文档中使用 Mermaid 创建各种复杂图表，包括流程图、时序图、ER 图、类图、状态图、XY 图、甘特图、思维导图等。
@@ -18,9 +20,6 @@ seriesOrder: 3
 ## 流程图示例
 
 流程图非常适合表示流程或算法步骤。
-
-
-
 
 ```mermaid
 graph TD
@@ -58,7 +57,7 @@ sequenceDiagram
     Server->>Database: 查询用户凭据
     Database-->>Server: 返回用户数据
     Server-->>WebApp: 返回认证结果
-    
+
     alt 认证成功
         WebApp->>User: 显示欢迎页面
         WebApp->>Server: 请求用户数据
@@ -124,7 +123,7 @@ classDiagram
         +logout()
         +updateProfile()
     }
-    
+
     class Article {
         +String title
         +String content
@@ -134,21 +133,21 @@ classDiagram
         +edit()
         +delete()
     }
-    
+
     class Comment {
         +String content
         +Date commentDate
         +addComment()
         +deleteComment()
     }
-    
+
     class Category {
         +String name
         +String description
         +addArticle()
         +removeArticle()
     }
-    
+
     User "1" -- "*" Article : 写作
     User "1" -- "*" Comment : 发表
     Article "1" -- "*" Comment : 拥有
@@ -162,14 +161,14 @@ classDiagram
 ```mermaid
 stateDiagram-v2
     [*] --> 草稿
-    
+
     草稿 --> 审核中 : 提交
     审核中 --> 草稿 : 拒绝
     审核中 --> 已批准 : 批准
     已批准 --> 已发布 : 发布
     已发布 --> 已归档 : 归档
     已发布 --> 草稿 : 撤回
-    
+
     state 已发布 {
         [*] --> 活跃
         活跃 --> 隐藏 : 临时隐藏
@@ -177,7 +176,7 @@ stateDiagram-v2
         活跃 --> [*]
         隐藏 --> [*]
     }
-    
+
     已归档 --> [*]
 ```
 

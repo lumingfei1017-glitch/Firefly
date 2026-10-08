@@ -1,7 +1,6 @@
 ---
 title: plane 测试
 published: 2026-09-06
-pinned: true
 description: 仅仅是个测试。
 tags: [Markdown, 博客, 测试, Agent]
 category: 文章示例
@@ -14,6 +13,7 @@ category: 文章示例
 > Pi 是一个类 Claude Code 的 **编码智能体框架 (Coding Agent Harness)**，支持命令行交互、远程会话、多 LLM 提供商、终端 UI 渲染等能力。
 
 ---
+![[Snipaste_2026-07-24_17-59-00.png]]
 
 ## 一、项目概览
 
