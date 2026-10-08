@@ -1,6 +1,6 @@
 ---
 title: plane 测试
-published: 2026-10-08
+published: 2026-9-06
 pinned: true
 description: 仅仅是个测试。
 tags: [Markdown, 博客, 测试, Agent]
