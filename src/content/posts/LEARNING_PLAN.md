@@ -1,3 +1,14 @@
+---
+title: Firefly 测试
+published: 1970-01-02
+pinned: true
+description: Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。
+tags: [Markdown, Firefly, 博客, 主题, 模板]
+category: 文章示例
+draft: true
+image: ./images/firefly2.avif
+---
+
 # Pi Agent Harness 学习计划
 
 > 项目地址: `D:\code\lc_worksapce\pi` | `https://github.com/earendil-works/pi-mono`
@@ -11,6 +22,7 @@
 ### 1.1 这是什么？
 
 Pi 是一个**模块化、可扩展的 AI 编码助手**，核心功能是：
+
 - 在终端中与 LLM 进行交互式对话
 - 自动调用工具（读文件、写文件、搜索、执行命令等）
 - 支持多轮 Agent 循环（思考→调用工具→观察结果→继续思考）
@@ -20,16 +32,16 @@ Pi 是一个**模块化、可扩展的 AI 编码助手**，核心功能是：
 
 ### 1.2 技术栈
 
-| 技术 | 用途 |
-|------|------|
-| TypeScript | 全部源代码，使用 erasable 语法 |
-| Node.js >= 22 | 运行时 |
-| Bun | 可选的二进制打包 |
-| esbuild | 构建打包 |
-| Biome | 格式化和 lint |
-| vitest | 测试框架 |
-| CBOR | 二进制协议序列化 |
-| SQLite | 会话持久化 |
+| 技术          | 用途                           |
+| ------------- | ------------------------------ |
+| TypeScript    | 全部源代码，使用 erasable 语法 |
+| Node.js >= 22 | 运行时                         |
+| Bun           | 可选的二进制打包               |
+| esbuild       | 构建打包                       |
+| Biome         | 格式化和 lint                  |
+| vitest        | 测试框架                       |
+| CBOR          | 二进制协议序列化               |
+| SQLite        | 会话持久化                     |
 
 ### 1.3 Monorepo 结构一览
 
@@ -68,14 +80,14 @@ pi/
 
 #### 2.2 关键文件
 
-| 文件 | 内容 |
-|------|------|
-| `packages/chord/src/api.ts` | 核心 API 定义 |
-| `packages/chord/src/context/` | 服务上下文 (Context) 实现 |
-| `packages/chord/src/services/` | 服务生命周期管理 |
-| `packages/chord/src/delta/` | 增量更新机制 |
-| `packages/chord/src/facets/` | 切面 (Facets) 扩展点 |
-| `packages/chord/src/node.ts` | Node.js 适配 |
+| 文件                           | 内容                      |
+| ------------------------------ | ------------------------- |
+| `packages/chord/src/api.ts`    | 核心 API 定义             |
+| `packages/chord/src/context/`  | 服务上下文 (Context) 实现 |
+| `packages/chord/src/services/` | 服务生命周期管理          |
+| `packages/chord/src/delta/`    | 增量更新机制              |
+| `packages/chord/src/facets/`   | 切面 (Facets) 扩展点      |
+| `packages/chord/src/node.ts`   | Node.js 适配              |
 
 #### 2.3 关键概念
 
@@ -109,19 +121,19 @@ chord 是 Pi 的骨架，**所有上层包都依赖它**。理解 chord 就理�
 
 #### 3.2 关键文件
 
-| 文件 | 内容 |
-|------|------|
-| `packages/ai/src/types.ts` | 核心类型定义 (Message, Model, Transport 等) |
-| `packages/ai/src/index.ts` | 包入口，导出所有公共 API |
-| `packages/ai/src/api/` | 各提供商的 API 实现 |
-| `packages/ai/src/providers/` | 各提供商的模型注册和配置 |
-| `packages/ai/src/models.ts` | 模型类型定义 |
-| `packages/ai/src/models-store.ts` | 模型存储和查询 |
-| `packages/ai/src/model-catalog.ts` | 模型目录管理 |
-| `packages/ai/src/compat/` | 兼容层 (旧版 API 适配) |
-| `packages/ai/src/auth/` | 认证系统 (OAuth, credential store) |
-| `packages/ai/src/providers/anthropic.ts` | Anthropic 示例实现 |
-| `packages/ai/src/providers/openai.ts` | OpenAI 示例实现 |
+| 文件                                     | 内容                                        |
+| ---------------------------------------- | ------------------------------------------- |
+| `packages/ai/src/types.ts`               | 核心类型定义 (Message, Model, Transport 等) |
+| `packages/ai/src/index.ts`               | 包入口，导出所有公共 API                    |
+| `packages/ai/src/api/`                   | 各提供商的 API 实现                         |
+| `packages/ai/src/providers/`             | 各提供商的模型注册和配置                    |
+| `packages/ai/src/models.ts`              | 模型类型定义                                |
+| `packages/ai/src/models-store.ts`        | 模型存储和查询                              |
+| `packages/ai/src/model-catalog.ts`       | 模型目录管理                                |
+| `packages/ai/src/compat/`                | 兼容层 (旧版 API 适配)                      |
+| `packages/ai/src/auth/`                  | 认证系统 (OAuth, credential store)          |
+| `packages/ai/src/providers/anthropic.ts` | Anthropic 示例实现                          |
+| `packages/ai/src/providers/openai.ts`    | OpenAI 示例实现                             |
 
 #### 3.3 关键概念
 
@@ -160,20 +172,20 @@ chord 是 Pi 的骨架，**所有上层包都依赖它**。理解 chord 就理�
 
 #### 4.2 关键文件
 
-| 文件 | 内容 |
-|------|------|
-| `packages/agent/src/agent.ts` | Agent 核心逻辑，包含 `createAgent` API |
-| `packages/agent/src/agent-loop.ts` | Agent Loop 实现（主循环逻辑） |
-| `packages/agent/src/types.ts` | 核心类型定义 |
-| `packages/agent/src/stream-fn.ts` | 流式函数封装 |
-| `packages/agent/src/harness/` | Agent Harness — 完整的 agent 运行环境 |
-| `packages/agent/src/harness/agent-harness.ts` | Harness 主入口 |
-| `packages/agent/src/harness/context.ts` | 执行上下文 |
-| `packages/agent/src/harness/runtime/` | 运行时（执行、reducer 等） |
-| `packages/agent/src/harness/session/` | 会话管理 |
-| `packages/agent/src/harness/tools/` | 工具系统 |
-| `packages/agent/src/harness/env/` | 环境适配（Node.js 等） |
-| `packages/agent/src/search/` | 搜索功能实现 |
+| 文件                                          | 内容                                   |
+| --------------------------------------------- | -------------------------------------- |
+| `packages/agent/src/agent.ts`                 | Agent 核心逻辑，包含 `createAgent` API |
+| `packages/agent/src/agent-loop.ts`            | Agent Loop 实现（主循环逻辑）          |
+| `packages/agent/src/types.ts`                 | 核心类型定义                           |
+| `packages/agent/src/stream-fn.ts`             | 流式函数封装                           |
+| `packages/agent/src/harness/`                 | Agent Harness — 完整的 agent 运行环境  |
+| `packages/agent/src/harness/agent-harness.ts` | Harness 主入口                         |
+| `packages/agent/src/harness/context.ts`       | 执行上下文                             |
+| `packages/agent/src/harness/runtime/`         | 运行时（执行、reducer 等）             |
+| `packages/agent/src/harness/session/`         | 会话管理                               |
+| `packages/agent/src/harness/tools/`           | 工具系统                               |
+| `packages/agent/src/harness/env/`             | 环境适配（Node.js 等）                 |
+| `packages/agent/src/search/`                  | 搜索功能实现                           |
 
 #### 4.3 关键概念
 
@@ -227,18 +239,18 @@ chord 是 Pi 的骨架，**所有上层包都依赖它**。理解 chord 就理�
 
 #### 5.2 关键文件
 
-| 文件 | 内容 |
-|------|------|
-| `packages/tui/src/tui.ts` | TUI 引擎核心 |
-| `packages/tui/src/tui-alt-screen.ts` | 备用屏幕模式 |
-| `packages/tui/src/tui-main-screen.ts` | 主屏幕模式 |
-| `packages/tui/src/terminal.ts` | 终端抽象层 |
-| `packages/tui/src/layout.ts` | 布局系统 |
-| `packages/tui/src/layout-node.ts` | 布局节点 |
-| `packages/tui/src/components/` | 组件库（Markdown, Editor, Text, Box 等） |
-| `packages/tui/src/keybindings.ts` | 按键绑定系统 |
-| `packages/tui/src/keys.ts` | 按键处理 |
-| `packages/tui/src/editor-component.ts` | 编辑器组件 |
+| 文件                                   | 内容                                     |
+| -------------------------------------- | ---------------------------------------- |
+| `packages/tui/src/tui.ts`              | TUI 引擎核心                             |
+| `packages/tui/src/tui-alt-screen.ts`   | 备用屏幕模式                             |
+| `packages/tui/src/tui-main-screen.ts`  | 主屏幕模式                               |
+| `packages/tui/src/terminal.ts`         | 终端抽象层                               |
+| `packages/tui/src/layout.ts`           | 布局系统                                 |
+| `packages/tui/src/layout-node.ts`      | 布局节点                                 |
+| `packages/tui/src/components/`         | 组件库（Markdown, Editor, Text, Box 等） |
+| `packages/tui/src/keybindings.ts`      | 按键绑定系统                             |
+| `packages/tui/src/keys.ts`             | 按键处理                                 |
+| `packages/tui/src/editor-component.ts` | 编辑器组件                               |
 
 #### 5.3 关键概念
 
@@ -279,49 +291,49 @@ chord 是 Pi 的骨架，**所有上层包都依赖它**。理解 chord 就理�
 
 #### 6.2 关键文件
 
-| 文件                                                                | 内容                                          |
-| ----------------------------------------------------------------- | ------------------------------------------- |
-| `packages/coding-agent/src/main.ts`                               | **应用入口点** — CLI 参数解析、模式选择、初始化               |
-| `packages/coding-agent/src/cli.ts`                                | CLI 入口（bin 指向）                              |
-| `packages/coding-agent/src/config.ts`                             | 全局配置                                        |
-| `packages/coding-agent/src/core/agent-session.ts`                 | Agent 会话实现                                  |
-| `packages/coding-agent/src/core/agent-session-services.ts`        | 会话服务创建                                      |
-| `packages/coding-agent/src/core/agent-session-runtime.ts`         | 会话运行时                                       |
+| 文件                                                              | 内容                                               |
+| ----------------------------------------------------------------- | -------------------------------------------------- |
+| `packages/coding-agent/src/main.ts`                               | **应用入口点** — CLI 参数解析、模式选择、初始化    |
+| `packages/coding-agent/src/cli.ts`                                | CLI 入口（bin 指向）                               |
+| `packages/coding-agent/src/config.ts`                             | 全局配置                                           |
+| `packages/coding-agent/src/core/agent-session.ts`                 | Agent 会话实现                                     |
+| `packages/coding-agent/src/core/agent-session-services.ts`        | 会话服务创建                                       |
+| `packages/coding-agent/src/core/agent-session-runtime.ts`         | 会话运行时                                         |
 | `packages/coding-agent/src/core/sdk.ts`                           | **SDK 入口** — 对外暴露的 API                      |
 | `packages/coding-agent/src/core/tools/`                           | 工具实现（bash, read, write, edit, grep, find 等） |
-| `packages/coding-agent/src/core/system-prompt.ts`                 | 系统提示词                                       |
-| `packages/coding-agent/src/core/settings-manager.ts`              | 设置管理                                        |
-| `packages/coding-agent/src/core/session-manager.ts`               | 会话管理                                        |
-| `packages/coding-agent/src/core/model-runtime.ts`                 | 模型运行时                                       |
-| `packages/coding-agent/src/core/model-resolver.ts`                | 模型解析                                        |
-| `packages/coding-agent/src/core/extensions/`                      | 扩展系统                                        |
-| `packages/coding-agent/src/modes/`                                | 运行模式（交互式、打印模式、RPC 等）                        |
+| `packages/coding-agent/src/core/system-prompt.ts`                 | 系统提示词                                         |
+| `packages/coding-agent/src/core/settings-manager.ts`              | 设置管理                                           |
+| `packages/coding-agent/src/core/session-manager.ts`               | 会话管理                                           |
+| `packages/coding-agent/src/core/model-runtime.ts`                 | 模型运行时                                         |
+| `packages/coding-agent/src/core/model-resolver.ts`                | 模型解析                                           |
+| `packages/coding-agent/src/core/extensions/`                      | 扩展系统                                           |
+| `packages/coding-agent/src/modes/`                                | 运行模式（交互式、打印模式、RPC 等）               |
 | `packages/coding-agent/src/modes/interactive/interactive-mode.ts` | 交互模式主入口                                     |
-| `packages/coding-agent/src/modes/interactive/tui-renderer.ts`     | TUI 渲染器                                     |
+| `packages/coding-agent/src/modes/interactive/tui-renderer.ts`     | TUI 渲染器                                         |
 | `packages/coding-agent/src/modes/print-mode.ts`                   | 非交互打印模式                                     |
-| `packages/coding-agent/src/extensions/`                           | 内置扩展                                        |
+| `packages/coding-agent/src/extensions/`                           | 内置扩展                                           |
 
 #### 6.3 运行模式
 
-| 模式 | 说明 |
-|------|------|
-| **Interactive Mode** | 全屏 TUI 交互式对话（默认模式） |
-| **Print Mode** | 一次性问答模式（`-p "提问"`） |
-| **RPC Mode** | JSON-RPC 协议模式（用于程序化调用） |
-| **Client Mode** | 连接远程 Pi 服务端 |
-| **Server Mode** | 启动远程 Pi 服务端 |
+| 模式                 | 说明                                |
+| -------------------- | ----------------------------------- |
+| **Interactive Mode** | 全屏 TUI 交互式对话（默认模式）     |
+| **Print Mode**       | 一次性问答模式（`-p "提问"`）       |
+| **RPC Mode**         | JSON-RPC 协议模式（用于程序化调用） |
+| **Client Mode**      | 连接远程 Pi 服务端                  |
+| **Server Mode**      | 启动远程 Pi 服务端                  |
 
 #### 6.4 核心工具集
 
-| 工具 | 说明 |
-|------|------|
-| `bash` | 执行 Shell 命令 |
-| `read` | 读取文件内容 |
-| `write` | 写入文件 |
-| `edit` | 编辑文件（精确替换） |
-| `grep` | 搜索文件内容 |
-| `find` | 查找文件 |
-| `ls` | 列出目录 |
+| 工具    | 说明                 |
+| ------- | -------------------- |
+| `bash`  | 执行 Shell 命令      |
+| `read`  | 读取文件内容         |
+| `write` | 写入文件             |
+| `edit`  | 编辑文件（精确替换） |
+| `grep`  | 搜索文件内容         |
+| `find`  | 查找文件             |
+| `ls`    | 列出目录             |
 
 #### 6.5 学习要点
 
@@ -358,17 +370,17 @@ Pi 支持远程会话，允许客户端连接远程服务器。这三个包实�
 
 #### 7.2 关键文件
 
-| 包 | 文件 | 内容 |
-|----|------|------|
-| protocol | `cbor/codec.ts` | CBOR 编解码 |
-| protocol | `framing.ts` | 消息帧协议 |
-| protocol | `protocol.ts` | 协议定义 |
-| client | `client.ts` | 客户端实现 |
-| client | `connection.ts` | 连接管理 |
-| client | `transport.ts` | 传输层抽象 |
-| server | `server.ts` | 服务端实现 |
-| server | `listener.ts` | 监听器 |
-| server | `session-router.ts` | 会话路由 |
+| 包       | 文件                | 内容        |
+| -------- | ------------------- | ----------- |
+| protocol | `cbor/codec.ts`     | CBOR 编解码 |
+| protocol | `framing.ts`        | 消息帧协议  |
+| protocol | `protocol.ts`       | 协议定义    |
+| client   | `client.ts`         | 客户端实现  |
+| client   | `connection.ts`     | 连接管理    |
+| client   | `transport.ts`      | 传输层抽象  |
+| server   | `server.ts`         | 服务端实现  |
+| server   | `listener.ts`       | 监听器      |
+| server   | `session-router.ts` | 会话路由    |
 
 #### 7.3 学习要点
 
@@ -437,23 +449,23 @@ Pi 支持远程会话，允许客户端连接远程服务器。这三个包实�
 
 ### 🔴 核心难点（理解即可，无需精通）
 
-| 难点 | 位置 | 说明 |
-|------|------|------|
-| Agent Loop 异步流控制 | `agent/src/agent-loop.ts` | 流式 LLM、工具执行、状态更新的交织 |
-| 多提供商适配 | `ai/src/providers/` | 30+ 提供商的 API 差异统一 |
-| TUI 差分渲染 | `tui/src/tui.ts` | 高效计算终端内容差异的算法 |
-| 会话管理 | `coding-agent/src/core/session-manager.ts` | 持久化、恢复、并发控制 |
-| 布局系统 | `tui/src/layout.ts` | 约束布局的递归计算 |
+| 难点                  | 位置                                       | 说明                               |
+| --------------------- | ------------------------------------------ | ---------------------------------- |
+| Agent Loop 异步流控制 | `agent/src/agent-loop.ts`                  | 流式 LLM、工具执行、状态更新的交织 |
+| 多提供商适配          | `ai/src/providers/`                        | 30+ 提供商的 API 差异统一          |
+| TUI 差分渲染          | `tui/src/tui.ts`                           | 高效计算终端内容差异的算法         |
+| 会话管理              | `coding-agent/src/core/session-manager.ts` | 持久化、恢复、并发控制             |
+| 布局系统              | `tui/src/layout.ts`                        | 约束布局的递归计算                 |
 
 ### 🟡 扩展难点（按需学习）
 
-| 难点 | 位置 | 说明 |
-|------|------|------|
-| 插件/扩展系统 | `coding-agent/src/core/extensions/` | 插件的加载和生命周期 |
-| OAuth 认证 | `ai/src/auth/` | 多提供商认证流程 |
-| CBOR 协议 | `protocol/src/cbor/` | 二进制序列化协议 |
-| 模型数据生成 | `ai/scripts/generate-models.ts` | 自动发现和更新模型元数据 |
-| 项目信任机制 | `coding-agent/src/core/trust-manager.ts` | 安全模型 |
+| 难点          | 位置                                     | 说明                     |
+| ------------- | ---------------------------------------- | ------------------------ |
+| 插件/扩展系统 | `coding-agent/src/core/extensions/`      | 插件的加载和生命周期     |
+| OAuth 认证    | `ai/src/auth/`                           | 多提供商认证流程         |
+| CBOR 协议     | `protocol/src/cbor/`                     | 二进制序列化协议         |
+| 模型数据生成  | `ai/scripts/generate-models.ts`          | 自动发现和更新模型元数据 |
+| 项目信任机制  | `coding-agent/src/core/trust-manager.ts` | 安全模型                 |
 
 ---
 
