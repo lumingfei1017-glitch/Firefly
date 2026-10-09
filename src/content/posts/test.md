@@ -20,7 +20,5 @@ category: 文章示例
 
 # vedio
 <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115820906743556&bvid=BV1WevXBCE1y&cid=35130442580&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
-
-
-![[test-1.webp]]
-![[test-2.webp]]
+![](./images/test.webp)
+![](./images/test-1.webp)![](./images/test-2.webp)
